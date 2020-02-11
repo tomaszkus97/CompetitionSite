@@ -6,52 +6,82 @@ import { Section, Container } from "../global"
 const Features = () => (
   <Section id="features">
     <StyledContainer>
-      <Subtitle>Features</Subtitle>
-      <SectionTitle>Smart money management</SectionTitle>
+      <SectionTitle>Regulamin zawodów</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>1. Kategorie</FeatureTitle>
           <FeatureText>
-            Receive budget and spending alerts based on your favorite triggers.
+            <ul>
+              <li>
+              I grupa – kategoria wiekowa 6(i mniej) - 11 lat (dziewczynki i chłopcy)
+              </li>
+              <li>
+              II grupa – kategoria wiekowa 12 - 16 lat (dziewczęta)
+              </li>
+              <li>
+              III grupa – kategoria wiekowa 12 - 16 lat (chłopcy)
+              </li>
+              <li>
+              IV grupa – kategoria wiekowa 17 lat i powyżej (kobiety) (możliwa dodatkowa kategoria)
+              </li>
+              <li>
+              V grupa - kategoria wiekowa 17 lat i powyżej (mężczyźni) (możliwa dodatkowa kategoria)
+              </li>
+            </ul>
+            Jeżeli zbierze się powyżej 10 uczestników to będą dodatkowe kategorie dot.wieku 5-8 lat i 50+
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Security</FeatureTitle>
+          <FeatureTitle>2. Opłata startowa</FeatureTitle>
           <FeatureText>
-            Your data is always safe with us as we use the latest security
-            protocols.
+            <ul>
+              <li>
+              Opłata startowa za udział w zawodach (w jednej kategorii) wynosi: 50,- PLN ( wszystkie kat. wiekowe , do 2 dni przed zawodami- przelew na konto)
+              </li>
+              <li>
+              Opłata startowa za udział w zawodach (w jednej kategorii) wynosi: 80,- PLN ( w dniu zawodów)
+              </li>
+            </ul>
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Automation</FeatureTitle>
+          <FeatureTitle>3. Przebieg zawodów</FeatureTitle>
           <FeatureText>
-            Create smart automated workflows and triggers for your money.
+          <ul>
+              <li>
+              Listy startowe zostaną ustalone w poszczególnych grupach wiekowych w dniu 06.03.2020 r. o godz. 21:00.
+              </li>
+              <li>
+              Zawodnicy startują począwszy od najmłodszej grupy dziewcząt i chłopców.
+              </li>
+              <li>
+              Start pierwszej grupy odbędzie się o godz. 9:00, lub wcześniej, po powiadomieniu
+wszystkich startujących
+              </li>
+            </ul>
           </FeatureText>
         </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Aggregation</FeatureTitle>
-          <FeatureText>
-            Easily link up to 5 banks to your finance account.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Payments</FeatureTitle>
-          <FeatureText>Send money to friends and family with ease.</FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Rewards</FeatureTitle>
-          <FeatureText>
-            High interest and rewards for hitting your goals.
-          </FeatureText>
-        </FeatureItem>
+
       </FeaturesGrid>
+      <GetStartedContainer>
+      <TryItButton>Pobierz pełen regulamin</TryItButton>
+      </GetStartedContainer>
+      
     </StyledContainer>
   </Section>
 )
 
 export default Features
 
-const StyledContainer = styled(Container)``
+const StyledContainer = styled(Container)`
+`
+
+const GetStartedContainer = styled(Container)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
 
 const SectionTitle = styled.h3`
   color: ${props => props.theme.color.primary};
@@ -60,22 +90,40 @@ const SectionTitle = styled.h3`
   margin: 0 auto 40px;
   text-align: center;
 `
-
-const Subtitle = styled.h5`
-  font-size: 16px;
-  color: ${props => props.theme.color.accent};
-  letter-spacing: 0px;
-  margin-bottom: 12px;
-  text-align: center;
+const TryItButton = styled.button`
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 1px;
+  height: 60px;
+  display: flex;
+  margin-left: 8px;
+  text-transform: uppercase;
+  align-self: center;
+  cursor: pointer;
+  white-space: nowrap;
+  background: ${props => props.theme.color.secondary};
+  border-radius: 4px;
+  padding: 0px 40px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  outline: 0px;
+  &:hover {
+    box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
+  }
+  @media (max-width: ${props => props.theme.screen.md}) {
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    margin-left: 0;
+  }
 `
-
 const FeaturesGrid = styled.div`
-  max-width: 670px;
+  max-width: 900px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   margin: 0px auto;
-  grid-column-gap: 40px;
-  grid-row-gap: 35px;
   @media (max-width: ${props => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
     padding: 0 64px;
@@ -84,8 +132,8 @@ const FeaturesGrid = styled.div`
 
 const FeatureItem = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: ;
   flex-direction: column;
 `
 
@@ -97,5 +145,5 @@ const FeatureTitle = styled.h4`
 `
 
 const FeatureText = styled.p`
-  text-align: center;
+  text-align: flex-start;
 `

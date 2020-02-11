@@ -3,12 +3,12 @@ import styled from "styled-components"
 
 import { Container, Section } from "../global"
 
-const GetStarted = () => (
+export const GetStarted = () => (
   <StyledSection>
     <GetStartedContainer>
-      <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
-      <TryItButton>Get early access</TryItButton>
-      <Subtitle>No credit card required.</Subtitle>
+      <GetStartedTitle>Zapisz się!</GetStartedTitle>
+      <TryItButton>Pobierz kartę zgłoszeniową</TryItButton>
+      <Subtitle>Wypełnioną kartę odeślij na adres mailowy: <a href="mailto:mpp2019zgloszenie@gmail.com">mpp2019zgloszenie@gmail.com</a></Subtitle>
     </GetStartedContainer>
   </StyledSection>
 )
