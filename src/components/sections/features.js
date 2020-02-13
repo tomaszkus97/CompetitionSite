@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import file from "../../images/product/regulamin.pdf"
 
 import { Section, Container } from "../global"
 
 const Features = () => (
-  <Section id="features">
+  <Section id="regulamin">
     <StyledContainer>
       <SectionTitle>Regulamin zawodów</SectionTitle>
       <FeaturesGrid>
@@ -64,7 +65,7 @@ wszystkich startujących
 
       </FeaturesGrid>
       <GetStartedContainer>
-      <TryItButton>Pobierz pełen regulamin</TryItButton>
+      <TryItButton download href={file}>Pobierz pełen regulamin</TryItButton>
       </GetStartedContainer>
       
     </StyledContainer>
@@ -90,34 +91,35 @@ const SectionTitle = styled.h3`
   margin: 0 auto 40px;
   text-align: center;
 `
-const TryItButton = styled.button`
-  font-weight: 500;
-  font-size: 14px;
-  color: white;
-  letter-spacing: 1px;
-  height: 60px;
-  display: flex;
-  margin-left: 8px;
-  text-transform: uppercase;
-  align-self: center;
-  cursor: pointer;
-  white-space: nowrap;
-  background: ${props => props.theme.color.secondary};
-  border-radius: 4px;
-  padding: 0px 40px;
-  border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
-  outline: 0px;
-  &:hover {
-    box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
-  }
-  @media (max-width: ${props => props.theme.screen.md}) {
-  }
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    margin-left: 0;
-  }
+const TryItButton = styled.a`
+font-weight: 500;
+font-size: 14px;
+color: white;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+letter-spacing: 1px;
+height: 60px;
+margin-left: 8px;
+text-transform: uppercase;
+cursor: pointer;
+white-space: nowrap;
+background: ${props => props.theme.color.secondary};
+border-radius: 4px;
+padding: 0px 40px;
+border-width: 0px;
+border-style: initial;
+border-color: initial;
+border-image: initial;
+outline: 0px;
+&:hover {
+  box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
+}
+@media (max-width: ${props => props.theme.screen.md}) {
+}
+@media (max-width: ${props => props.theme.screen.sm}) {
+  margin-left: 0;
+}
 `
 const FeaturesGrid = styled.div`
   max-width: 900px;

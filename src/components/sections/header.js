@@ -1,22 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import skier2 from "../../images/product/skier3.png"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
 
 import { Container } from "../global"
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "skier2" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  `)
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -37,7 +26,7 @@ const Header = () => {
             </h2>
           </HeaderTextGroup>
           <ImageWrapper>
-            <StyledImage fluid={data.file.childImageSharp.fluid} />
+            <StyledImage src={skier2} />
             <br />
           </ImageWrapper>
         </Flex>
@@ -50,7 +39,7 @@ export default Header
 
 const HeaderWrapper = styled.header`
   background-color: #e8f1ff;
-  padding: 160px 0 80px 0;
+  padding: 100px 0 40px 0;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
   @media (max-width: ${props => props.theme.screen.md}) {
@@ -63,6 +52,7 @@ const HeaderTextGroup = styled.div`
   > div {
     width: 120%;
     margin-bottom: -4.5%;
+    margin-top: 40px;
 
     @media (max-width: ${props => props.theme.screen.md}) {
       margin: 0 16px;
@@ -70,6 +60,7 @@ const HeaderTextGroup = styled.div`
   }
 
   h1 {
+    padding-top: 40px;
     margin: 0 0 24px;
     color: ${props => props.theme.color.primary};
   }
@@ -100,10 +91,10 @@ const ImageWrapper = styled.div`
   }
 `
 
-const StyledImage = styled(Img)`
+const StyledImage = styled.img`
 
-  width: 500px;
-  height: 120%;
+  width: 600px;
+  height: 100%;
   @media (max-width: ${props => props.theme.screen.md}) {
     width: 400px;
   }

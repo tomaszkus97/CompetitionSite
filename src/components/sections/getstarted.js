@@ -1,13 +1,14 @@
 import React from "react"
 import styled from "styled-components"
+import file from "../../images/product/karta.pdf"
 
 import { Container, Section } from "../global"
 
 export const GetStarted = () => (
-  <StyledSection>
+  <StyledSection id="zapisy">
     <GetStartedContainer>
       <GetStartedTitle>Zapisz się!</GetStartedTitle>
-      <TryItButton>Pobierz kartę zgłoszeniową</TryItButton>
+      <TryItButton href={file} download>Pobierz kartę zgłoszeniową</TryItButton>
       <Subtitle>Wypełnioną kartę odeślij na adres mailowy: <a href="mailto:mpp2019zgloszenie@gmail.com">mpp2019zgloszenie@gmail.com</a></Subtitle>
     </GetStartedContainer>
   </StyledSection>
@@ -33,13 +34,15 @@ const GetStartedTitle = styled.h3`
   text-align: center;
 `
 
-const TryItButton = styled.button`
+const TryItButton = styled.a`
   font-weight: 500;
   font-size: 14px;
   color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
   letter-spacing: 1px;
   height: 60px;
-  display: block;
   margin-left: 8px;
   text-transform: uppercase;
   cursor: pointer;
