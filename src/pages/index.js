@@ -11,7 +11,7 @@ import Infos from "../components/sections/maininfo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="MPP2020" />
     <Navigation />
     <Header />
     <Infos/>
