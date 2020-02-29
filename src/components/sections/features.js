@@ -14,19 +14,34 @@ const Features = () => (
           <FeatureText>
             <ul>
               <li>
-              I grupa – kategoria wiekowa 6(i mniej) - 11 lat (dziewczynki i chłopcy)
+              I grupa – kategoria wiekowa 5 - 7 lat (dziewczynki i chłopcy)
               </li>
               <li>
-              II grupa – kategoria wiekowa 12 - 16 lat (dziewczęta)
+              II grupa – kategoria wiekowa 8 - 11 lat (dziewczynki i chłopcy)
               </li>
               <li>
-              III grupa – kategoria wiekowa 12 - 16 lat (chłopcy)
+              III grupa – kategoria wiekowa 12 - 16 lat (dziewczęta)
               </li>
               <li>
-              IV grupa – kategoria wiekowa 17 lat i powyżej (kobiety) (możliwa dodatkowa kategoria)
+              IV grupa – kategoria wiekowa 12 - 16 lat (chłopcy)
               </li>
               <li>
-              V grupa - kategoria wiekowa 17 lat i powyżej (mężczyźni) (możliwa dodatkowa kategoria)
+              V grupa – kategoria wiekowa 17 lat i powyżej (kobiety)
+              </li>
+              <li>
+              VI grupa - kategoria wiekowa 17 lat i powyżej (mężczyźni)
+              </li>
+              <li>
+              VII grupa - kategoria wiekowa 45+ (mężczyźni)
+              </li>
+              <li>
+              VIII grupa - kategoria wiekowa 45+ (kobiety)
+              </li>
+              <li>
+              IX grupa - snowboard open
+              </li>
+              <li>
+              X grupa - skki trikke open
               </li>
             </ul>
             Jeżeli zbierze się powyżej 10 uczestników to będą dodatkowe kategorie dot.wieku 5-8 lat i 50+
